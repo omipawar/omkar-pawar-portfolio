@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production --base-href=/omkar_portfolio/"
+    "build:prod": "ng build --configuration=production --base-href=/omkar_portfolio/"
   },
   "dependencies": {
     "@angular/animations": "^19.2.0",
