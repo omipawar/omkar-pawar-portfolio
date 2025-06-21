@@ -46,7 +46,7 @@ import { DataService } from '../../services/data.service';
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; {{ currentYear }} Alex Morgan. All rights reserved.</p>
+          <p>&copy; {{ currentYear }} Omkar Pawar. All rights reserved.</p>
         </div>
       </div>
     </footer>
