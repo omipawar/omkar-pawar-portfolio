@@ -91,7 +91,7 @@ export class DataService {
     { name: "Git/GitHub/GitLab/AWS", level: 90, category: "Tools" },
     { name: "Postman", level: 70, category: "Tools" },
     // { name: "Docker", level: 70, category: "Tools" },
-    { name: "CI/CD", level: 55, category: "Tools" },
+    { name: "CI/CD (GitHub Actions)", level: 55, category: "Tools" },
   ]);
 
   // Testimonials data
