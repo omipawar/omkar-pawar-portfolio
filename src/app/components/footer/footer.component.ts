@@ -35,9 +35,9 @@ import { DataService } from '../../services/data.service';
                 <a href="{{ portfolioOwner.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="{{ portfolioOwner.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <!-- <a href="{{ portfolioOwner.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <i class="fab fa-twitter"></i>
-                </a>
+                </a> -->
                 <!-- <a href="{{ portfolioOwner.social.dribbble }}" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">
                   <i class="fab fa-dribbble"></i>
                 </a> -->

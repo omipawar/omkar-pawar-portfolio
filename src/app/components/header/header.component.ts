@@ -13,7 +13,9 @@ import { ThemeService } from "../../services/theme.service";
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <a class="{{!scrolled ? 'logo-color' : ''}}" href="#">Omkar Pawar</a>
+            <a class="{{ !scrolled ? 'logo-color' : '' }}" href="#"
+              >Omkar Pawar</a
+            >
           </div>
           <nav class="desktop-nav">
             <ul>
@@ -128,11 +130,11 @@ import { ThemeService } from "../../services/theme.service";
         transition: color 0.3s ease;
       }
 
-      .logo-color{
-        color:var(--text-primary) !important;
+      .logo-color {
+        color: var(--text-primary) !important;
       }
 
-      .logo-color:hover{
+      .logo-color:hover {
         color: var(--primary-500) !important;
       }
 
@@ -240,6 +242,20 @@ import { ThemeService } from "../../services/theme.service";
 
       .language-selector option {
         background-color: var(--bg-secondary);
+      }
+
+      select {
+        border: none; /* removes default border */
+        outline: none; /* removes white outline on focus */
+        background-color: #333; /* example background */
+        color: white; /* text color */
+        padding: 8px;
+        border-radius: 6px;
+      }
+
+      select:focus {
+        outline: none;
+        border: 2px solid #00bcd4; /* add your custom focus border */
       }
 
       @media (max-width: 768px) {

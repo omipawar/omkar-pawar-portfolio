@@ -173,7 +173,7 @@ import { AnimationService } from '../../../../services/animation.service';
     .project-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: scale-down;
       transition: transform 0.5s ease;
     }
     
