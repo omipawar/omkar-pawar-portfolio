@@ -12,7 +12,7 @@ import { DataService } from '../../services/data.service';
         <div class="footer-content">
           <div class="footer-logo">
             <h3>Omkar Pawar</h3>
-            <p>Software Engineer & UI/UX Designer</p>
+            <p>Software Engineer (Angular + Node.js)</p>
           </div>
           <div class="footer-links">
             <div class="footer-nav">

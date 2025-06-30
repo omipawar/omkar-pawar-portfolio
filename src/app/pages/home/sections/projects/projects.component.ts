@@ -80,7 +80,7 @@ import { AnimationService } from '../../../../services/animation.service';
             <span class="modal-category">{{ selectedProject.category }}</span>
             <div class="modal-description">
               <p>{{ selectedProject.description }}</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Morbi at fringilla nisl, in commodo quam. Nullam non nulla ut quam feugiat gravida non nec dolor.</p>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Morbi at fringilla nisl, in commodo quam. Nullam non nulla ut quam feugiat gravida non nec dolor.</p> -->
             </div>
             <div class="modal-tech">
               <h4>Technologies Used:</h4>
@@ -329,7 +329,7 @@ import { AnimationService } from '../../../../services/animation.service';
     .modal-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: scale-down;
     }
     
     .modal-body {

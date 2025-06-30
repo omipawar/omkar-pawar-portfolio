@@ -13,7 +13,7 @@ export class DataService {
     name: "Omkar Pawar",
     title: "Software Engineer (Angular + Node.js)",
     email: "omkar.angular@gmail.com",
-    phone: "+91 8308609962",
+    phone: "8308609962",
     location: "Kolhapur, Maharashtra, India",
     about: `I'm a passionate MEAN stack developer with over 3.6 years of experience, with a strong emphasis on front-end development using Angular (60–70%) and solid hands-on experience with Node.js, Express, and MongoDB (30–40%) on the backend.
 
@@ -37,9 +37,15 @@ export class DataService {
       title: "Skill India Digital Hub",
       description:
         "Explore Skill India Digital Hub's (SIDH) free courses & skill development schemes across sectors including IT, digital marketing, coding, AI. Find jobs & apprenticeship opportunities.",
-      image:
-        "assets/SIP.webp",
-      technologies: ["Angular","Bootstrap", "Node.js", "MongoDB", "Express", "Golang"],
+      image: "assets/SIP.webp",
+      technologies: [
+        "Angular",
+        "Bootstrap",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Golang",
+      ],
       category: "Web Development",
       link: "https://www.skillindiadigital.gov.in/home",
       featured: true,
@@ -49,13 +55,19 @@ export class DataService {
       title: "IVUniverse",
       description:
         "Powering Meaningful Conversations That Bring Communities Together For Good",
-      image:
-        "assets/ivUniverse.png",
-      technologies: ["Angular", "Angular Material", "AGM Maps", "Node.js", "MongoDB", "Express"],
+      image: "assets/ivUniverse.png",
+      technologies: [
+        "Angular",
+        "Angular Material",
+        "AGM Maps",
+        "Node.js",
+        "MongoDB",
+        "Express",
+      ],
       category: "Web Development",
       link: "https://ivuniverse.com/",
       featured: true,
-    }
+    },
   ]);
 
   // Skills data
@@ -63,21 +75,23 @@ export class DataService {
     { name: "JavaScript", level: 95, category: "Frontend" },
     { name: "TypeScript", level: 90, category: "Frontend" },
     { name: "Angular", level: 95, category: "Frontend" },
-    { name: "React", level: 85, category: "Frontend" },
-    { name: "Vue.js", level: 80, category: "Frontend" },
+    // { name: "React", level: 85, category: "Frontend" },
+    // { name: "Vue.js", level: 80, category: "Frontend" },
     { name: "HTML/CSS", level: 90, category: "Frontend" },
-    { name: "SASS/SCSS", level: 85, category: "Frontend" },
-    { name: "Node.js", level: 80, category: "Backend" },
+    { name: "Bootstrap", level: 90, category: "Frontend" },
+    { name: "SASS/SCSS", level: 50, category: "Frontend" },
+    { name: "Node.js", level: 75, category: "Backend" },
     { name: "Express", level: 75, category: "Backend" },
-    { name: "MongoDB", level: 70, category: "Backend" },
-    { name: "PostgreSQL", level: 65, category: "Backend" },
-    { name: "UI/UX Design", level: 85, category: "Design" },
-    { name: "Figma", level: 90, category: "Design" },
-    { name: "Adobe XD", level: 85, category: "Design" },
-    { name: "Sketch", level: 80, category: "Design" },
-    { name: "Git/GitHub", level: 90, category: "Tools" },
-    { name: "Docker", level: 70, category: "Tools" },
-    { name: "CI/CD", level: 75, category: "Tools" },
+    { name: "MongoDB", level: 60, category: "Backend" },
+    // { name: "PostgreSQL", level: 65, category: "Backend" },
+    // { name: "UI/UX Design", level: 85, category: "Design" },
+    // { name: "Figma", level: 90, category: "Design" },
+    // { name: "Adobe XD", level: 85, category: "Design" },
+    // { name: "Sketch", level: 80, category: "Design" },
+    { name: "Git/GitHub/GitLab/AWS", level: 90, category: "Tools" },
+    { name: "Postman", level: 70, category: "Tools" },
+    // { name: "Docker", level: 70, category: "Tools" },
+    { name: "CI/CD", level: 55, category: "Tools" },
   ]);
 
   // Testimonials data
@@ -113,33 +127,24 @@ export class DataService {
 
   private experience: Experience[] = [
     {
-      role: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      period: "2021 - Present",
+      role: "Junior Software Developer",
+      company: "Transneuron Technology",
+      period: "Jul 2022 - Present",
       details: [
-        "Led development of enterprise-scale web applications using Angular and Node.js",
-        "Mentored junior developers and conducted code reviews",
-        "Implemented CI/CD pipelines reducing deployment time by 40%",
+        "Developed scalable web applications using MongoDB, Express.js, Angular, and Node.js ensuring performance and reliability",
+        "Integrated Angular components with RESTful APIs built with Node.js, Express, and Golang, enabling seamless data flow across microservices and enhancing system efficiency",
+        "Integrated third-party APIs and Collaborated with cross-functional teams to analyze requirements, design solutions, and implement new features, driving project success",
+        "Provided proactive production support, identifying and resolving issues quickly to ensure system stability and improve customer satisfaction.",
       ],
     },
     {
-      role: "Full Stack Developer",
-      company: "Digital Innovations Ltd.",
-      period: "2019 - 2021",
-      details: [
-        "Developed and maintained multiple client projects using React and Express",
-        "Optimized database queries improving application performance by 30%",
-        "Integrated third-party APIs and payment gateways",
-      ],
-    },
-    {
-      role: "Frontend Developer",
+      role: "Front-End / Angular Developer",
       company: "Creative Web Agency",
-      period: "2017 - 2019",
+      period: "Jan 2022 - Jun 2022",
       details: [
-        "Built responsive web applications using Angular and Vue.js",
+        "Built responsive web applications using HTML, CSS, JavaScript, Bootstrap, and Angular.",
         "Collaborated with designers to implement pixel-perfect UI",
-        "Reduced load time by 50% through optimization techniques",
+        "Collaborated with clients to understand requirements and deliver timely solutions",
       ],
     },
   ];
