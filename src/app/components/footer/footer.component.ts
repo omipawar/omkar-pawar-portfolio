@@ -1,33 +1,34 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../services/data.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
             <h3>Omkar Pawar</h3>
-            <p>Software Engineer (Angular + Node.js)</p>
+            <p>{{'PORTFOLIO.ROLE' | translate}}</p>
           </div>
           <div class="footer-links">
             <div class="footer-nav">
-              <h4>Navigation</h4>
+              <h4>{{'FOOTER.NAVIGATION' | translate}}</h4>
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#home">{{'NAV.HOME' | translate}}</a></li>
+                <li><a href="#about">{{'NAV.ABOUT' | translate}}</a></li>
+                <li><a href="#skills">{{'NAV.SKILLS' | translate}}</a></li>
+                <li><a href="#projects">{{'NAV.PROJECTS' | translate}}</a></li>
                 <!-- <li><a href="#testimonials">Testimonials</a></li> -->
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">{{'NAV.CONTACT' | translate}}</a></li>
               </ul>
             </div>
             <div class="footer-social">
-              <h4>Connect</h4>
+              <h4>{{'FOOTER.CONNECT' | translate}}</h4>
               <div class="social-icons">
                 <a href="{{ portfolioOwner.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <i class="fab fa-github"></i>

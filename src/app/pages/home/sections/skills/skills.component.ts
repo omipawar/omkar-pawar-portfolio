@@ -2,19 +2,20 @@ import { Component, Input, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Skill } from '../../../../models/skill.model';
 import { AnimationService } from '../../../../services/animation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <section id="skills" class="section skills-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="fade-in">My Skills</h2>
+          <h2 class="fade-in">{{'SKILLS' | translate}}</h2>
           <div class="divider fade-in"></div>
           <p class="section-description fade-in">
-            Here are the technical skills and tools I've mastered over the years.
+            {{'SKILLS_TEXT' | translate}}
           </p>
         </div>
         

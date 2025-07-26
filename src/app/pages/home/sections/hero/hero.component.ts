@@ -1,25 +1,26 @@
 import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimationService } from '../../../../services/animation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <section id="home" class="hero-section">
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="hero-content" #heroContent>
           <h1 class="fade-in">
-            <span class="greeting">Hello, I'm</span>
-            <span class="name">{{ portfolioOwner.name }}</span>
+            <span class="greeting">{{ 'PORTFOLIO.GREET' | translate }}</span>
+            <span class="name">{{ 'PORTFOLIO.NAME' | translate }}</span>
           </h1>
-          <h2 class="profession fade-in">{{ portfolioOwner.title }}</h2>
-          <p class="intro fade-in">Creating beautiful digital experiences that solve real problems.</p>
+          <h2 class="profession fade-in">{{ 'PORTFOLIO.ROLE' | translate }}</h2>
+          <p class="intro fade-in">{{ 'PORTFOLIO.TAGLINE' | translate }}</p>
           <div class="hero-cta fade-in">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#projects" class="btn btn-primary">{{ 'PORTFOLIO.MY_WORK' | translate }}</a>
+            <a href="#contact" class="btn btn-outline">{{ 'PORTFOLIO.CONATCT_ME' | translate }}</a>
           </div>
           <div class="hero-social fade-in">
             <a href="{{ portfolioOwner.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

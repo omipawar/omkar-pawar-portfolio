@@ -2,19 +2,20 @@ import { Component, Input, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../../models/project.model';
 import { AnimationService } from '../../../../services/animation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <section id="projects" class="section projects-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="fade-in">My Projects</h2>
+          <h2 class="fade-in">{{'PROJECTS' | translate}}</h2>
           <div class="divider fade-in"></div>
           <p class="section-description fade-in">
-            Here's a selection of my recent work. Each project showcases different skills and technologies.
+            {{'PROJECTS_TEXT' | translate}}
           </p>
         </div>
         

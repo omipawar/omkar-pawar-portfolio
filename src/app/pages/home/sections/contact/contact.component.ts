@@ -2,35 +2,36 @@ import { Component, Input, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AnimationService } from '../../../../services/animation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslateModule],
   template: `
     <section id="contact" class="section contact-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="fade-in">Get In Touch</h2>
+          <h2 class="fade-in">{{'GET_IN_TOUCH.TITLE' | translate}}</h2>
           <div class="divider fade-in"></div>
           <p class="section-description fade-in">
-            Have a project in mind or want to discuss a potential collaboration? Feel free to reach out!
+            {{'GET_IN_TOUCH.SUB_TITLE' | translate}}
           </p>
         </div>
         
         <div class="row contact-content">
           <div class="col col-md-5 fade-in slide-in-left">
             <div class="contact-info">
-              <h3>Contact Information</h3>
-              <p>Feel free to contact me for any project or collaboration.</p>
+              <h3>{{'GET_IN_TOUCH.CONTACT_INFO' | translate}}</h3>
+              <p>{{'GET_IN_TOUCH.CONTACT_SUBTEXT' | translate}}</p>
               
               <div class="info-item">
                 <div class="info-icon">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="info-text">
-                  <h4>Location</h4>
-                  <p>{{ portfolioOwner.location }}</p>
+                  <h4>{{'GET_IN_TOUCH.LOCATION' | translate}}</h4>
+                  <p>{{'GET_IN_TOUCH.LOCATION_NAME' | translate}}</p>
                 </div>
               </div>
               
@@ -39,7 +40,7 @@ import { AnimationService } from '../../../../services/animation.service';
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div class="info-text">
-                  <h4>Email</h4>
+                  <h4>{{'GET_IN_TOUCH.EMAIL' | translate}}</h4>
                   <p><a href="mailto:{{ portfolioOwner.email }}">{{ portfolioOwner.email }}</a> </p>
                 </div>
               </div>
@@ -49,7 +50,7 @@ import { AnimationService } from '../../../../services/animation.service';
                   <i class="fas fa-phone"></i>
                 </div>
                 <div class="info-text">
-                  <h4>Phone</h4>
+                  <h4>{{'GET_IN_TOUCH.PHONE' | translate}}</h4>
                   <p><a href="tel:+{{ portfolioOwner.phone }}">+91 {{ portfolioOwner.phone }}</a></p>
                 </div>
               </div>

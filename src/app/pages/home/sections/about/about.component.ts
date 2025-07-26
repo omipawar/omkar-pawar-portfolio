@@ -7,51 +7,52 @@ import {
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { AnimationService } from "../../../../services/animation.service";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: "app-about",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   template: `
     <section id="about" class="section about-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="fade-in">About Me</h2>
+          <h2 class="fade-in">{{"ABOUT.TITLE" | translate}}</h2>
           <div class="divider fade-in"></div>
         </div>
         <div class="about-content">
           <div class="about-photo fade-in slide-in-left" #photoCol>
             <img
-              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Alex Morgan Portrait"
+              src="./assets/portfolio-pic.jpeg"
+              alt="Omkar Pawar Portrait"
             />
           </div>
           <div class="about-text fade-in slide-in-right" #textCol>
-            <h3>Who I Am</h3>
-            <p>{{ portfolioOwner.about }}</p>
+            <h3>{{"ABOUT.WHO_I_AM" | translate}}</h3>
+            <p>{{"ABOUT.INTRO" | translate}}</p>
             <div class="about-info">
               <div class="info-item">
                 <span class="info-label"
-                  ><i class="fas fa-map-marker-alt"></i> Location:</span
+                  ><i class="fas fa-map-marker-alt"></i> {{"ABOUT.LOCATION" | translate}}:</span
                 >
-                <span class="info-value">{{ portfolioOwner.location }}</span>
+                <span class="info-value">{{"ABOUT.LOCATION_NAME" | translate}}</span>
               </div>
               <div class="info-item">
                 <span class="info-label"
-                  ><i class="fas fa-envelope"></i> Email:</span
+                  ><i class="fas fa-envelope"></i> {{"ABOUT.EMAIL" | translate}}:</span
                 >
                 <span class="info-value">{{ portfolioOwner.email }}</span>
               </div>
               <div class="info-item">
                 <span class="info-label"
-                  ><i class="fas fa-phone"></i> Phone:</span
+                  ><i class="fas fa-phone"></i> {{"ABOUT.PHONE" | translate}}:</span
                 >
                 <span class="info-value">{{ portfolioOwner.phone }}</span>
               </div>
             </div>
             <div class="about-cta">
               <a href="#" class="btn btn-primary" (click)="downloadResume()"
-                >Download Resume</a
+                >{{"ABOUT.DOWNLOAD_RESUME" | translate}}</a
               >
             </div>
           </div>
@@ -192,8 +193,8 @@ export class AboutComponent implements AfterViewInit {
 
   downloadResume() {
     const link = document.createElement("a");
-    link.href = "assets/Omkar_Pawar_MEAN_Developer_Resume.pdf";
-    link.download = "Omkar_Pawar_MEAN_Developer_Resume.pdf";
+    link.href = "assets/Omkar_resume.pdf";
+    link.download = "Omkar_Pawar_MEAN_Developer_resume.pdf";
     link.click();
   }
 }

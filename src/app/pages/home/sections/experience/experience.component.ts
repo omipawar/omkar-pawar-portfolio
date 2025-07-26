@@ -1,8 +1,20 @@
 import { CommonModule } from "@angular/common";
-import { AfterViewInit, Component, inject, OnInit } from "@angular/core";
-import { TranslateModule } from "@ngx-translate/core";
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  inject,
+  OnDestroy,
+  OnInit,
+} from "@angular/core";
+import {
+  LangChangeEvent,
+  TranslateModule,
+  TranslateService,
+} from "@ngx-translate/core";
 import { DataService } from "../../../../services/data.service";
 import { AnimationService } from "../../../../services/animation.service";
+import { Subject, takeUntil } from "rxjs";
 
 @Component({
   selector: "app-experience",
@@ -12,22 +24,26 @@ import { AnimationService } from "../../../../services/animation.service";
     <section id="experience" class="section about-section">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="fade-in">Experience</h2>
+          <h2 class="fade-in">{{"EXPERIENCE_TEXT" | translate}}</h2>
           <div class="divider fade-in"></div>
         </div>
         <div class="experience-section" data-aos="fade-up">
           <div class="experience-timeline">
             <div
-              *ngFor="let exp of experience; let isOdd=odd;"
+              *ngFor="let exp of experience; let isOdd = odd"
               class="timeline-item"
               data-aos="fade-up"
             >
-              <div class="timeline-content {{isOdd ? 'fade-in slide-in-right' : 'fade-in slide-in-left'}}">
-                <h3>{{ exp.role }}</h3>
-                <h4>{{ exp.company }}</h4>
-                <p class="timeline-date">{{ exp.period }}</p>
+              <div
+                class="timeline-content {{
+                  isOdd ? 'fade-in slide-in-right' : 'fade-in slide-in-left'
+                }}"
+              >
+                <h3>{{ exp.ROLE }}</h3>
+                <h4>{{ exp.COMPANY }}</h4>
+                <p class="timeline-date">{{ exp.PERIOD }}</p>
                 <ul class="timeline-details">
-                  <li *ngFor="let detail of exp.details">{{ detail }}</li>
+                  <li *ngFor="let detail of exp.DETAILS">{{ detail }}</li>
                 </ul>
               </div>
             </div>
@@ -159,18 +175,42 @@ import { AnimationService } from "../../../../services/animation.service";
     }
   `,
 })
-export class ExperienceComponent implements OnInit, AfterViewInit {
+export class ExperienceComponent implements OnInit, AfterViewInit, OnDestroy {
   private dataService = inject(DataService);
-  private animationService = inject(AnimationService)
-  experience = this.dataService.getExperience();
-  ngOnInit(): void {}
+  private animationService = inject(AnimationService);
+  // experience = this.dataService.getExperience();
+  experience: any = [];
+  destroy$: Subject<boolean> = new Subject();
+
+  constructor(private translate: TranslateService) {}
+  ngOnInit(): void {
+    this.translate.onLangChange
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((event: LangChangeEvent) => {
+        this.loadExperience(); // Reload experience from the new language file
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
+  }
 
   ngAfterViewInit() {
     this.setupAnimations();
   }
-  
+
   setupAnimations() {
-    const fadeElements = document.querySelectorAll('#experience .fade-in');
-    this.animationService.setupAnimations(fadeElements, 'visible');
+    const fadeElements = document.querySelectorAll("#experience .fade-in");
+    this.animationService.setupAnimations(fadeElements, "visible");
+  }
+
+  loadExperience() {
+    this.translate.get("EXPERIENCE").subscribe((data: any[]) => {
+      this.experience = data;
+      setTimeout(() => {
+        this.setupAnimations();
+      }, 50);
+    });
   }
 }

@@ -127,10 +127,10 @@ export class DataService {
 
   private experience: Experience[] = [
     {
-      role: "Junior Software Developer",
-      company: "Transneuron Technology",
-      period: "Jul 2022 - Present",
-      details: [
+      ROLE: "Junior Software Developer",
+      COMPANY: "Transneuron Technology",
+      PERIOD: "Jul 2022 - Present",
+      DETAILS: [
         "Developed scalable web applications using MongoDB, Express.js, Angular, and Node.js ensuring performance and reliability",
         "Integrated Angular components with RESTful APIs built with Node.js, Express, and Golang, enabling seamless data flow across microservices and enhancing system efficiency",
         "Integrated third-party APIs and Collaborated with cross-functional teams to analyze requirements, design solutions, and implement new features, driving project success",
@@ -138,10 +138,10 @@ export class DataService {
       ],
     },
     {
-      role: "Front-End / Angular Developer",
-      company: "Creative Web Agency",
-      period: "Jan 2022 - Jun 2022",
-      details: [
+      ROLE: "Front-End / Angular Developer",
+      COMPANY: "Creative Web Agency",
+      PERIOD: "Jan 2022 - Jun 2022",
+      DETAILS: [
         "Built responsive web applications using HTML, CSS, JavaScript, Bootstrap, and Angular.",
         "Collaborated with designers to implement pixel-perfect UI",
         "Collaborated with clients to understand requirements and deliver timely solutions",

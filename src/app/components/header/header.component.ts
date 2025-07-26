@@ -1,13 +1,13 @@
 import { Component, HostListener, inject, OnInit, signal } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
 import { ThemeService } from "../../services/theme.service";
 
 @Component({
   selector: "app-header",
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   template: `
     <header [class.scrolled]="scrolled">
       <div class="container">
@@ -19,12 +19,14 @@ import { ThemeService } from "../../services/theme.service";
           </div>
           <nav class="desktop-nav">
             <ul>
-              <li><a href="#home" class="nav-link">Home</a></li>
-              <li><a href="#about" class="nav-link">About</a></li>
-              <li><a href="#skills" class="nav-link">Skills</a></li>
-              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li>
+                <a href="#home" class="nav-link">{{ "NAV.HOME" | translate }}</a>
+              </li>
+              <li><a href="#about" class="nav-link">{{ "NAV.ABOUT" | translate }}</a></li>
+              <li><a href="#skills" class="nav-link">{{ "NAV.SKILLS" | translate }}</a></li>
+              <li><a href="#projects" class="nav-link">{{ "NAV.PROJECTS" | translate }}</a></li>
               <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
-              <li><a href="#contact" class="nav-link">Contact</a></li>
+              <li><a href="#contact" class="nav-link">{{ "NAV.CONTACT" | translate }}</a></li>
               <li>
                 <div class="nav-actions">
                   <div class="language-selector">
@@ -52,21 +54,21 @@ import { ThemeService } from "../../services/theme.service";
       <div class="mobile-nav" [class.open]="mobileNavOpen">
         <ul>
           <li>
-            <a href="#home" class="nav-link" (click)="closeMobileNav()">Home</a>
+            <a href="#home" class="nav-link" (click)="closeMobileNav()">{{ "NAV.HOME" | translate }}</a>
           </li>
           <li>
             <a href="#about" class="nav-link" (click)="closeMobileNav()"
-              >About</a
+              >{{ "NAV.ABOUT" | translate }}</a
             >
           </li>
           <li>
             <a href="#skills" class="nav-link" (click)="closeMobileNav()"
-              >Skills</a
+              >{{ "NAV.SKILLS" | translate }}</a
             >
           </li>
           <li>
             <a href="#projects" class="nav-link" (click)="closeMobileNav()"
-              >Projects</a
+              >{{ "NAV.PROJECTS" | translate }}</a
             >
           </li>
           <!-- <li>
@@ -76,7 +78,7 @@ import { ThemeService } from "../../services/theme.service";
           </li> -->
           <li>
             <a href="#contact" class="nav-link" (click)="closeMobileNav()"
-              >Contact</a
+              >{{ "NAV.CONTACT" | translate }}</a
             >
           </li>
           <li>

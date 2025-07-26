@@ -1,5 +1,6 @@
 {
   "NAV": {
+    "HOME": "Home",
     "ABOUT": "About",
     "PROJECTS": "Projects",
     "SKILLS": "Skills",
@@ -10,26 +11,14 @@
     "DARK": "Dark Mode"
   },
   "ABOUT": {
-    "GREETING": "Hello, I'm",
-    "INTRO": "A passionate full-stack developer focused on creating clean, user-friendly applications.",
-    "VIEW_WORK": "View My Work",
-    "CONTACT": "Contact Me",
-    "ABOUT_ME": "About Me",
-    "FEATURED_PROJECTS": "Featured Projects",
-    "VIEW_ALL_PROJECTS": "View All Projects"
-  },
-  "PROJECTS": {
-    "TITLE": "My Projects",
-    "SUBTITLE": "Check out some of my recent work and personal projects.",
-    "ALL": "All Projects",
-    "FEATURED": "Featured",
-    "LIVE": "Live Demo",
-    "CODE": "View Code",
-    "NO_PROJECTS": "No projects found."
-  },
-  "SKILLS": {
-    "TITLE": "My Skills",
-    "SUBTITLE": "A comprehensive overview of my technical skills and proficiency levels."
+    "TITLE": "About Me",
+    "WHO_I_AM": "Who I Am",
+    "INTRO": "I am a passionate MEAN stack developer with over 3.6 years of experience, with a strong emphasis on front-end development using Angular (60–70%) and solid hands-on experience with Node.js, Express, and MongoDB (30–40%) on the backend.\n\nI specialize in building dynamic, responsive, and user-friendly web applications that solve real-world problems. My focus is on delivering clean, maintainable code and crafting seamless user experiences powered by Angular's robust framework and component-driven architecture.\n\nOn the backend, I design and integrate RESTful APIs, manage databases, and ensure smooth communication between services, contributing to scalable and performant full-stack solutions.\n\nI’m driven by a love for learning and continuously exploring new technologies to stay ahead in the evolving web development landscape.",
+    "LOCATION": "Location",
+    "LOCATION_NAME": "Kolhapur, Maharashtra, India",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "DOWNLOAD_RESUME": "Download Resume"
   },
   "CONTACT": {
     "TITLE": "Get In Touch",
@@ -57,7 +46,54 @@
   "FOOTER": {
     "TAGLINE": "Building beautiful and functional web experiences.",
     "QUICK_LINKS": "Quick Links",
-    "CONNECT": "Connect With Me",
-    "RIGHTS": "All Rights Reserved."
+    "RIGHTS": "All Rights Reserved.",
+    "CONNECT": "Connect",
+    "NAVIGATION":"Navigation"
+  },
+  "PORTFOLIO": {
+    "GREET": "Hello, I'm",
+    "NAME": "Omkar Pawar",
+    "ROLE": "Software Engineer (Angular + Node.js)",
+    "TAGLINE": "Creating beautiful digital experiences that solve real problems.",
+    "MY_WORK": "View My Work",
+    "CONATCT_ME": "Contact ME"
+  },
+  "EXPERIENCE_TEXT": "Experience",
+  "EXPERIENCE": [
+    {
+      "ROLE": "Junior Software Developer",
+      "COMPANY": "Transneuron Technology",
+      "PERIOD": "Jul 2022 - Present",
+      "DETAILS": [
+        "Developed scalable web applications using MongoDB, Express.js, Angular, and Node.js ensuring performance and reliability.",
+        "Integrated Angular components with RESTful APIs built with Node.js, Express, and Golang, enabling seamless data flow across microservices and enhancing system efficiency.",
+        "Integrated third-party APIs and collaborated with cross-functional teams to analyze requirements, design solutions, and implement new features, driving project success.",
+        "Provided proactive production support, identifying and resolving issues quickly to ensure system stability and improve customer satisfaction."
+      ]
+    },
+    {
+      "ROLE": "Front-End / Angular Developer",
+      "COMPANY": "Creative Web Agency",
+      "PERIOD": "Jan 2022 - Jun 2022",
+      "DETAILS": [
+        "Built responsive web applications using HTML, CSS, JavaScript, Bootstrap, and Angular.",
+        "Collaborated with designers to implement pixel-perfect UI.",
+        "Collaborated with clients to understand requirements and deliver timely solutions."
+      ]
+    }
+  ],
+  "SKILLS": "My Skills",
+  "SKILLS_TEXT": "Here are the technical skills and tools I've mastered over the years.",
+  "PROJECTS": "My Projects",
+  "PROJECTS_TEXT": "Here's a selection of my recent work. Each project showcases different skills and technologies.",
+  "GET_IN_TOUCH": {
+    "TITLE": "Get In Touch",
+    "SUB_TITLE": "Have a project in mind or want to discuss a potential collaboration? Feel free to reach out!",
+    "CONTACT_INFO": "Contact Information",
+    "CONTACT_SUBTEXT": "Feel free to contact me for any project or collaboration.",
+    "LOCATION": "Location",
+    "LOCATION_NAME": "Kolhapur, Maharashtra, India",
+    "EMAIL": "Email",
+    "PHONE": "Phone"
   }
 }

@@ -10,8 +10,8 @@ export interface Project {
 }
 
 export interface Experience {
-  role: string;
-  company: string;
-  period: string;
-  details: string[];
+  ROLE: string;
+  COMPANY: string;
+  PERIOD: string;
+  DETAILS: string[];
 }
