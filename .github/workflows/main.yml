@@ -25,4 +25,5 @@ jobs:
         with:
           folder: dist/
           branch: prod
+          token: ${{ secrets.GH_TOKEN }}
           
